@@ -1,0 +1,54 @@
+{
+  "name": "Md. Rafidul Islam",
+  "title": "Software Engineering Student Learning Full-Stack Development.",
+  "description": "I am a Software Engineer with a focus on backend systems, particularly in the MERN stack. I have a strong foundation in C programming and JavaScript, and I am passionate about building scalable and efficient applications. My interests include software engineering principles, problem solving, and competitive programming. I am also a member of the Software Engineering Club and the Rocketry Club at Daffodil International University (DIU).",
+  "age": 21,
+  "image": "https://i.postimg.cc/kDrLxg6C/IMG-20250527-230219.jpg",
+  "skills": {
+    "programming": ["C programming", "JavaScript"],
+    "server": ["Node.js (Still Learning)"],
+    "database": ["MongoDB (Still Learning)"],
+    "telemetry": ["Rocketry telemetry basics"],
+    "cloud": ["Basic cloud concepts"],
+    "cI_cD": ["Basic understanding of CI/CD pipelines"],
+    "web_media": ["Html", "Css", "JavaScript", "TailwindCss", "React"],
+    "others": [
+      "Software Engineering principles",
+      "Problem Solving",
+      "Competitive Programming"
+    ]
+  },
+  "_honors_and_awards": [
+    {
+      "award_name": "National Programming Contest",
+      "position": "1st Place",
+      "time": "2025",
+      "place": "Dhaka,BD"
+    },
+    {
+      "award_name": "Inter University Hackathon",
+      "position": "Runner-up",
+      "time": " 2024",
+      "place": "Dhaka,BD"
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Software Engineering Club",
+      "position": "Member",
+      "joined": "11 Jan, 2025 - Present"
+    },
+    {
+      "name": "Rocketry Club",
+      "position": "Member",
+      "joined": "01 Mar, 2025 - Present"
+    }
+  ],
+  "contact": {
+    "facebook": "https://www.facebook.com/rafidul.islam.9026",
+    "instagram": "https://instagram.com/the_codecrafter_",
+    "linkedin": "https://www.linkedin.com/in/rafidul-islam-a2860b2a5/",
+    "github": "https://github.com/Rafidul-Islam/",
+    "email": "rafid.iconic@gmail.com"
+  }
+}
