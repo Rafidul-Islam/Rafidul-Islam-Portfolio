@@ -17,15 +17,15 @@
         "Vite",
         "Git & Github"
       ],
-      "repo": "https://github.com/Rafiul-Islam/Game-Hub",
-      "live_demo": "https://game-hub-web-application.vercel.app/"
+      "repo": "https://github.com/Rafidul-Islam?tab=repositories",
+      "live_demo": "https://english-janala-by-rafid.netlify.app/"
     },
     {
       "name": "Auction Gallery",
       "description": "A simple web app to see Bids on Different Items and collecttion",
       "technologies": ["TypeScript", "React", "Vite", "react‑beautiful‑dnd"],
-      "repo": "https://github.com/Rafiul-Islam/Taskify",
-      "live_demo": "https://taskify-app-react-ts.netlify.app/"
+      "repo": "https://github.com/Rafidul-Islam?tab=repositories",
+      "live_demo": "https://auctiion-gallery-by-rafid.netlify.app/"
     }
   ],
   "education": [
