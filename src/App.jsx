@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div className="border-black  lg:w-1/2 mx-auto  text-black lg:p-10">
+      <div className="border-black  lg:w-1/2 mx-auto  text-black lg:px-10">
         {/* //Image Section */}
         <section id="image-section" className=" p-4">
           <img
@@ -58,8 +58,8 @@ function App() {
                 "web_media",
                 "others",
               ].map((category) => (
-                <tr key={category} className="items-start">
-                  <td className="capitalize font-medium align-top text-left pr-10">
+                <tr key={category}>
+                  <td className="capitalize font-medium align-top text-left pr-15">
                     {category.replace("_", "/")}
                   </td>
                   <td>
@@ -76,6 +76,49 @@ function App() {
               ))}
             </tbody>
           </table>
+        </section>
+
+        {/* ================== */}
+        <section id="projects" className="p-5 space-y-4">
+          <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-2">
+            Projects
+          </h2>
+          {my_data.projects?.map((project) => (
+            <div className=" space-y-2 flex items-center justify-between">
+              <div className="w-4/5">
+                <h1 className="font-medium">{project.name}</h1>
+                <h1 className="text-gray-600">{project.description}</h1>
+                <h1 className="text-gray-600">
+                  <span className=" ">Tech Used&nbsp;</span>:&nbsp;
+                  {project.technologies.map((tech, index) => (
+                    <span>
+                      {tech}
+                      {index !== my_data.projects?.technologies?.length - 1
+                        ? ", "
+                        : ""}
+                    </span>
+                  ))}
+                </h1>
+              </div>
+              <div className="w-1/5 space-y-2 text-right ">
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  className="px-3 text-right italic  underline   text-gray-600"
+                >
+                  Code
+                </a>
+                <br />
+                <a
+                  href={project.live_demo}
+                  target="_blank"
+                  className="px-3 text-right italic underline   text-gray-600"
+                >
+                  Live
+                </a>
+              </div>
+            </div>
+          ))}
         </section>
         {/* /------------- */}
         <section className="p-5">
@@ -104,6 +147,37 @@ function App() {
           )}
         </section>
 
+        {/* ===================== */}
+        <section id="education" className="p-5">
+          <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-2">
+            Education
+          </h2>
+          {my_data.education?.map((details) => (
+            <div className="mb-4 text-gray-600 flex ">
+              <div className="w-2/3">
+                <h2>{details.field}</h2>
+                <h2>{details.institution}</h2>
+                <h2>{details.location}</h2>
+              </div>
+
+              <div className="w-1/3 text-right">
+                {details.start_year && details.expected_graduation ? (
+                  <h2 className="italic">
+                    {details.start_year} -{details.expected_graduation}
+                  </h2>
+                ) : (
+                  ""
+                )}
+                {details.graduation_year ? (
+                  <h2 className="italic">{details.graduation_year}</h2>
+                ) : (
+                  ""
+                )}
+              </div>
+            </div>
+          ))}
+        </section>
+
         {/* ============================= */}
         <section id="clubs" className="p-5">
           <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-2">
@@ -119,10 +193,10 @@ function App() {
               {my_data.clubs?.map((club) => (
                 <div className="flex items-center justify-between">
                   <div className=" w-2/3">
-                    <h2 className="font-medium text-gray-600">{club.name}</h2>
-                    <p className="font-medium text-gray-600">{club.position}</p>
+                    <h2 className=" text-gray-600">{club.name}</h2>
+                    <p className=" text-gray-600">{club.position}</p>
                   </div>
-                  <p className="font-medium text-gray-600 text-right  w-1/3">
+                  <p className=" text-gray-600 text-right  w-1/3 italic">
                     {club.joined}
                   </p>
                 </div>

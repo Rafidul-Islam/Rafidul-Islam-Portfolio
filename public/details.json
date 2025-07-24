@@ -1,9 +1,49 @@
 {
   "name": "Md. Rafidul Islam",
   "title": "Software Engineering Student Learning Full-Stack Development.",
-  "description": "I am a Software Engineer with a focus on backend systems, particularly in the MERN stack. I have a strong foundation in C programming and JavaScript, and I am passionate about building scalable and efficient applications. My interests include software engineering principles, problem solving, and competitive programming. I am also a member of the Software Engineering Club and the Rocketry Club at Daffodil International University (DIU).",
+  "description": "I am a Software Engineer with a focus on Front-End of systems, particularly in the MERN stack. I have a strong foundation in C programming and JavaScript, and I am passionate about building scalable and efficient applications. My interests include software engineering principles, problem solving, and competitive programming.",
   "age": 21,
   "image": "https://i.postimg.cc/kDrLxg6C/IMG-20250527-230219.jpg",
+
+  "projects": [
+    {
+      "name": "English Janala",
+      "description": "A vocabulary learning web app.",
+      "technologies": [
+        "Html",
+        "TalwindCSS",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Git & Github"
+      ],
+      "repo": "https://github.com/Rafiul-Islam/Game-Hub",
+      "live_demo": "https://game-hub-web-application.vercel.app/"
+    },
+    {
+      "name": "Auction Gallery",
+      "description": "A simple web app to see Bids on Different Items and collecttion",
+      "technologies": ["TypeScript", "React", "Vite", "react‑beautiful‑dnd"],
+      "repo": "https://github.com/Rafiul-Islam/Taskify",
+      "live_demo": "https://taskify-app-react-ts.netlify.app/"
+    }
+  ],
+  "education": [
+    {
+      "level": "Bachelor's Degree",
+      "field": "Software Engineering",
+      "institution": "Daffodil International University (DIU)",
+      "location": "Dhaka, Bangladesh",
+      "start_year": 2025,
+      "expected_graduation": 2028
+    },
+    {
+      "level": "Higher Secondary Certificate (HSC)",
+      "institution": "Noakhali Government College",
+      "location": "Noakhali, Bangladesh",
+      "graduation_year": 2022
+    }
+  ],
   "skills": {
     "programming": ["C programming", "JavaScript"],
     "server": ["Node.js (Still Learning)"],
@@ -28,7 +68,7 @@
     {
       "award_name": "Inter University Hackathon",
       "position": "Runner-up",
-      "time": " 2024",
+      "time": "2024",
       "place": "Dhaka,BD"
     }
   ],
