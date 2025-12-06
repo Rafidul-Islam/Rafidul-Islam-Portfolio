@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { Heart } from "lucide-react";
 
 function App() {
   const [my_data, setPersonData] = useState([]);
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="border-black  lg:w-1/2 mx-auto  text-black lg:px-10">
+      <div className="border-black  lg:w-1/2 mx-auto   lg:px-10">
         {/* //Image Section */}
         <section id="image-section" className=" p-4">
           <img
@@ -29,15 +30,13 @@ function App() {
         {/* Header Title Section */}
         <section id="header-title" className="space-y-2 ">
           <h1 className="text-3xl font-bold text-center mt-4 ">
-            Hi 👋 I'm {my_data.name}
+            Hi 👋, It's me {my_data.name}
           </h1>
-          <p className="px-5 text-base text-center text-gray-600">
-            {my_data.title}
-          </p>
+          <p className="px-5 text-base text-center ">{my_data.title}</p>
         </section>
         {/* Description */}
         <section id="header-title" className="space-y-2 ">
-          <p className=" text-base text-justify   text-gray-600 p-5">
+          <p className=" text-base text-justify    p-5">
             {my_data.description}
           </p>
         </section>
@@ -52,7 +51,7 @@ function App() {
                 "programming",
                 "server",
                 "database",
-                "telemetry",
+                // "telemetry",
                 "cloud",
                 "cI_cD",
                 "web_media",
@@ -64,7 +63,7 @@ function App() {
                   </td>
                   <td>
                     {my_data?.skills?.[category]?.map((item, index) => (
-                      <span key={index} className="text-gray-600 ">
+                      <span key={index} className=" ">
                         {item}
                         {index !== my_data.skills[category].length - 1
                           ? ", "
@@ -80,22 +79,23 @@ function App() {
 
         {/* ================== */}
         <section id="projects" className="p-5 space-y-4">
-          <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-2">
+          <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-8">
             Projects
           </h2>
           {my_data.projects?.map((project) => (
-            <div className=" space-y-2 flex items-center justify-between">
+            <div
+              key={project.name}
+              className=" space-y-2 flex items-center justify-between"
+            >
               <div className="w-4/5">
-                <h1 className="font-medium">{project.name}</h1>
-                <h1 className="text-gray-600">{project.description}</h1>
-                <h1 className="text-gray-600">
+                <h1 className="font-bold text-xl">{project.name}</h1>
+                <h1 className="text-gray-200">{project.description}</h1>
+                <h1 className="">
                   <span className=" ">Tech Used&nbsp;</span>:&nbsp;
                   {project.technologies.map((tech, index) => (
-                    <span>
+                    <span key={tech}>
                       {tech}
-                      {index !== my_data.projects?.technologies?.length - 1
-                        ? ", "
-                        : ""}
+                      {index !== project.technologies.length - 1 ? ", " : ""}
                     </span>
                   ))}
                 </h1>
@@ -104,7 +104,8 @@ function App() {
                 <a
                   href={project.repo}
                   target="_blank"
-                  className="px-3 text-right italic  underline   text-gray-600"
+                  rel="noopener noreferrer"
+                  className="px-3 text-right italic  underline   "
                 >
                   Code
                 </a>
@@ -112,7 +113,8 @@ function App() {
                 <a
                   href={project.live_demo}
                   target="_blank"
-                  className="px-3 text-right italic underline   text-gray-600"
+                  rel="noopener noreferrer"
+                  className="px-3 text-right italic underline   "
                 >
                   Live
                 </a>
@@ -127,20 +129,23 @@ function App() {
           </h2>
           {my_data.honors_and_awards?.length === 0 ||
           !my_data.honors_and_awards?.length ? (
-            <div className="text-gray-600 italic">
+            <div className=" italic">
               No Honors and Awards to Show till now. But Inshallah One day there
               will be.
             </div>
           ) : (
             my_data.honors_and_awards?.map((hons) => (
-              <div className="flex items-center justify-between space-y-2">
+              <div
+                key={hons.award_name}
+                className="flex items-center justify-between space-y-2"
+              >
                 <div>
                   <h2 className="font-medium">{hons.position}</h2>
-                  <h2 className="text-gray-600">{hons.award_name}</h2>
+                  <h2 className="">{hons.award_name}</h2>
                 </div>
                 <div className="text-right">
                   <h2>{hons.time}</h2>
-                  <h2 className="text-gray-600">{hons.place}</h2>
+                  <h2 className="">{hons.place}</h2>
                 </div>
               </div>
             ))
@@ -153,7 +158,7 @@ function App() {
             Education
           </h2>
           {my_data.education?.map((details) => (
-            <div className="mb-4 text-gray-600 flex ">
+            <div key={details.institution} className="mb-4  flex ">
               <div className="w-2/3">
                 <h2>{details.field}</h2>
                 <h2>{details.institution}</h2>
@@ -184,21 +189,21 @@ function App() {
             Clubs
           </h2>
           {my_data.clubs?.length === 0 ? (
-            <div className="text-gray-600 italic">
-              No Honors and Awards to Show till now. But Inshallah One day there
-              will be.
+            <div className=" italic">
+              No Clubs to Show till now. But Inshallah One day there will be.
             </div>
           ) : (
             <div className="space-y-4">
               {my_data.clubs?.map((club) => (
-                <div className="flex items-center justify-between">
+                <div
+                  key={club.name}
+                  className="flex items-center justify-between"
+                >
                   <div className=" w-2/3">
-                    <h2 className=" text-gray-600">{club.name}</h2>
-                    <p className=" text-gray-600">{club.position}</p>
+                    <h2 className=" ">{club.name}</h2>
+                    <p className=" ">{club.position}</p>
                   </div>
-                  <p className=" text-gray-600 text-right  w-1/3 italic">
-                    {club.joined}
-                  </p>
+                  <p className="  text-right  w-1/3 italic">{club.joined}</p>
                 </div>
               ))}
             </div>
@@ -211,16 +216,17 @@ function App() {
             Connect
           </h2>
           {!my_data.contact ? (
-            <div className="text-gray-600 italic">No Contact Info.</div>
+            <div className=" italic">No Contact Info.</div>
           ) : (
             <div className="flex flex-wrap gap-2">
               {my_data.contact.linkedin && (
                 <a
                   href={my_data.contact.linkedin}
                   target="_blank"
-                  className="px-3 py-1  bg-gray-300 border-none font-medium rounded text-gray-700 flex items-center gap-1"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1  bg-gray-300 border-none font-medium rounded text-black flex items-center gap-1"
                 >
-                  <i className="text-xl text-gray-800 ri-linkedin-box-fill"></i>
+                  <i className="text-xl text-black ri-linkedin-box-fill"></i>
                   LinkedIn
                 </a>
               )}
@@ -228,18 +234,19 @@ function App() {
                 <a
                   href={my_data.contact.github}
                   target="_blank"
-                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-gray-700 flex items-center gap-1"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-black flex items-center gap-1"
                 >
-                  <i className="text-xl text-gray-800 ri-github-fill"></i>
+                  <i className="text-xl text-black ri-github-fill"></i>
                   GitHub
                 </a>
               )}
               {my_data.contact.email && (
                 <a
                   href={`mailto:${my_data.contact.email}`}
-                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-gray-700 flex items-center gap-1"
+                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-black flex items-center gap-1"
                 >
-                  <i className="text-xl text-gray-800 ri-mail-fill"></i>
+                  <i className="text-xl text-black ri-mail-fill"></i>
                   Email
                 </a>
               )}
@@ -247,9 +254,10 @@ function App() {
                 <a
                   href={my_data.contact.facebook}
                   target="_blank"
-                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-gray-700 flex items-center gap-1"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-black flex items-center gap-1"
                 >
-                  <i className="text-xl text-gray-800 ri-facebook-circle-fill"></i>
+                  <i className="text-xl text-black ri-facebook-circle-fill"></i>
                   Facebook
                 </a>
               )}
@@ -257,14 +265,23 @@ function App() {
                 <a
                   href={my_data.contact.instagram}
                   target="_blank"
-                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-gray-700 flex items-center gap-1"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-gray-300 border-none font-medium rounded text-black flex items-center gap-1"
                 >
-                  <i className="text-xl text-gray-800 ri-instagram-fill"></i>
+                  <i className="text-xl text-black ri-instagram-fill"></i>
                   Instagram
                 </a>
               )}
             </div>
           )}
+        </section>
+
+        <section className="flex justify-center items-center pb-2">
+          Developed With{" "}
+          <span className="mx-2">
+            <Heart />
+          </span>
+          by Rafid
         </section>
       </div>
     </>

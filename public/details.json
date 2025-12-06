@@ -1,11 +1,43 @@
 {
-  "name": "Md. Rafidul Islam",
+  "name": "Rafid",
   "title": "Software Engineering Student Learning Full-Stack Development.",
   "description": "I am a Software Engineer with a focus on Front-End of systems, particularly in the MERN stack. I have a strong foundation in C programming and JavaScript, and I am passionate about building scalable and efficient applications. My interests include software engineering principles, problem solving, and competitive programming.",
   "age": 21,
-  "image": "https://i.postimg.cc/kDrLxg6C/IMG-20250527-230219.jpg",
+  "image": "https://i.pinimg.com/736x/28/b8/72/28b872f8a774aee6d92ebbd1dcfa1f56.jpg",
 
   "projects": [
+    {
+      "name": "Self Made Dev",
+      "description": "Club Program Website Designed and developed a full-stack club management platform enabling event publishing, member onboarding, resource sharing, and internal program coordination for the Self Made Dev community.",
+      "technologies": [
+        "Html",
+        "TalwindCSS",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Git & Github",
+        "Python",
+        "Django"
+      ],
+      "repo": "https://github.com/Rafidul-Islam/self-made-devs",
+      "live_demo": "https://selfmade-dev.vercel.app/"
+    },
+    {
+      "name": "DevQuest Preli",
+      "description": "Club Program Website to take preliminary exams based.",
+      "technologies": [
+        "Html",
+        "TalwindCSS",
+        "JavaScript",
+        "React",
+        "Vite",
+        "Git & Github",
+        "Python",
+        "Django"
+      ],
+      "repo": "https://github.com/Rafidul-Islam/Devquest_preli",
+      "live_demo": "https://devquest-preli.vercel.app/"
+    },
     {
       "name": "English Janala",
       "description": "A vocabulary learning web app.",
@@ -36,18 +68,12 @@
       "location": "Dhaka, Bangladesh",
       "start_year": 2025,
       "expected_graduation": 2028
-    },
-    {
-      "level": "Higher Secondary Certificate (HSC)",
-      "institution": "Noakhali Government College",
-      "location": "Noakhali, Bangladesh",
-      "graduation_year": 2022
     }
   ],
   "skills": {
-    "programming": ["C programming", "JavaScript"],
-    "server": ["Node.js (Still Learning)"],
-    "database": ["MongoDB (Still Learning)"],
+    "programming": ["C", "C++", "JavaScript"],
+    "server": ["Node.js"],
+    "database": ["MongoDB (OnQuest)"],
     "telemetry": ["Rocketry telemetry basics"],
     "cloud": ["Basic cloud concepts"],
     "cI_cD": ["Basic understanding of CI/CD pipelines"],
@@ -77,11 +103,6 @@
       "name": "Software Engineering Club",
       "position": "Member",
       "joined": "11 Jan, 2025 - Present"
-    },
-    {
-      "name": "Rocketry Club",
-      "position": "Member",
-      "joined": "01 Mar, 2025 - Present"
     }
   ],
   "contact": {
