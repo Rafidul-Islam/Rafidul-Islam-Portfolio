@@ -22,7 +22,7 @@ function App() {
         {/* //Image Section */}
         <section id="image-section" className=" p-4">
           <img
-            className="rounded-full w-48 h-48 mx-auto object-cover"
+            className="rounded-full w-48 h-48 mx-auto object-cover outline-4 outline-green-600 outline-offset-4"
             src={my_data.image}
             alt="Image of The Author"
           />
@@ -40,6 +40,21 @@ function App() {
             {my_data.description}
           </p>
         </section>
+
+        <section className="space-y-2 border-red px-4">
+          <button
+            className="border-2 p-2 rounded-xl bg-white text-black font-bold"
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1kcDTel7SlJ-Y8o83Yx9xEstQWCE2CcPb/view?usp=sharing",
+                "_blank"
+              );
+            }}
+          >
+            <i class="ri-file-text-line"></i> View Resume
+          </button>
+        </section>
+
         {/* Skills, Be a lazy Programmer */}
         <section id="skills" className="p-5">
           <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-2">
