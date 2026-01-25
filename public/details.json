@@ -3,7 +3,7 @@
   "title": "Frontend-focused Software Engineer who enjoys understanding systems deeply..",
   "description": "I am a Software Engineer with a focus on Front-End systems, particularly in the MERN stack. I have a strong foundation in C++ programming and NodeJs, and I am passionate about building scalable and efficient applications. My interests include software engineering principles, problem solving, and competitive programming.",
   "age": 21,
-  "image": "../src/assets/rafid.png",
+  "image": "https://avatars.githubusercontent.com/u/175853264?v=4",
   "projects": [
     {
       "name": "Meal-Board",
